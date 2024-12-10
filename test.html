@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & JS Example</title>
+</head>
+<body>
+  <h1>Click the Button</h1>
+  <button id="alertButton">Click Me</button>
+
+  <script>
+  var myObj = {
+        success: true,
+        data: {
+            name: "SOS Bags",
+            webproduct_id: 104,
+            store_code: "shopify",
+            type: "upload_personalization_configuration",
+            product_type: "upload_personalization_configuration",
+            quantity: "100",
+            options: {
+                quantity: {
+                    label: "Quantity",
+                    default_value: "quantity_100",
+                    type: "single",
+                    info: "",
+                    hidden: false,
+                    values: [
+                        { label: "100", value: "quantity_100", attributes: { qty: "100", qty_setup_price: "0", qty_p1000: "0" } },
+                        { label: "250", value: "quantity_250", attributes: { qty: "250", qty_setup_price: "0", qty_p1000: "0" } },
+                        { label: "500", value: "quantity_500", attributes: { qty: "500", qty_setup_price: "0", qty_p1000: "0" } },
+                        { label: "1000", value: "quantity_1000", attributes: { qty: "1000", qty_setup_price: "0", qty_p1000: "0" } },
+                        { label: "2500", value: "quantity_2500", attributes: { qty: "2500", qty_setup_price: "0", qty_p1000: "0" } },
+                        { label: "5000", value: "quantity_5000", attributes: { qty: "5000", qty_setup_price: "0", qty_p1000: "0" } },
+                        { label: "10000", value: "quantity_10000", attributes: { qty: "10000", qty_setup_price: "0", qty_p1000: "0" } },
+                    ],
+                },
+                options: {
+                    label: "Options",
+                    default_value: ["option_none"],
+                    type: "multiple",
+                    info: "",
+                    hidden: true,
+                    values: [
+                        { label: "None", value: "option_none", attributes: { options_price_adjustment_first: "", options_price_adjustment_second: "" } },
+                    ],
+                },
+            },
+            productparts: [
+                {
+                    code: "pp_sos_bags",
+                    label: "SOS Bags",
+                    page_options: {
+                        paper: {
+                            label: "Material",
+                            default_value: ["paper_kraft_kraft"],
+                            type: "single",
+                            values: [
+                                { label: "White Paper", value: "paper_white_white", attributes: { weight: "115 g/m2", packing_value: "0.06", packing_paper_color: "rgb(255,255,255)" } },
+                                { label: "Kraft Paper", value: "paper_kraft_kraft", attributes: { weight: "115 g/m2", packing_value: "0.06", packing_paper_color: "rgb(255,255,255)" } },
+                            ],
+                        },
+                        format: {
+                            label: "Capacity",
+                            default_value: ["sos_bags_2_lb"],
+                            type: "single",
+                            values: [
+                                { label: "2 lb - 2.36\" x 8.66\"", value: "sos_bags_2_lb", attributes: { height: "8.66", width: "2.36" } },
+                                { label: "4 lb - 3.15\" x 9.45\"", value: "sos_bags_4_lb", attributes: { height: "9.45", width: "3.16" } },
+                                { label: "6 lb - 3.54\" x 10.63\"", value: "sos_bags_6_lb", attributes: { height: "10.63", width: "3.54" } },
+                                { label: "8 lb - 4\" x 11.8\"", value: "sos_bags_8_lb", attributes: { height: "11.8", width: "4.01" } },
+                            ],
+                        },
+                    },
+                },
+            ],
+        },
+    };
+    
+// Display productparts in a readable format
+myObj.data.productparts.forEach((part, index) => {
+    console.log("Page Options:");
+    for (const option in part.page_options) { 
+        console.log(`- ${option}:`, part.page_options[option].label);
+        part.page_options[option].values.forEach(item => {
+  console.log(item.label);
+});    }
+
+    
+});
+    </script>
+    
+</body>
+</html>

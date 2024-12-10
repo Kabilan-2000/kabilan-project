@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Options</title>
+</head>
+<body>
+
+    <h1>Page Options</h1>
+    <div id="paperOptions"></div>
+
+    <button onclick="appendAndPrint()">Append & Print Options</button>
+
+    <script>
+        
+        function appendAndPrint() {
+    const paperOptions = `
+        <h2>Paper Material</h2>
+        <ul>
+            <li>White Paper</li>
+            <li>Kraft Paper</li>
+        </ul>
+        <h2>Capacity Formats</h2>
+        <ul>
+            <li>2 lb - 2.36" x 8.66"</li>
+            <li>4 lb - 3.15" x 9.45"</li>
+            <li>6 lb - 3.54" x 10.63"</li>
+            <li>8 lb - 4" x 11.8"</li>
+        </ul>
+    `;
+
+    // Append the paper options to the page
+    document.getElementById("paperOptions").innerHTML = paperOptions;
+
+    // Trigger the print dialog
+    window.print();
+} 
+
+    </script>
+</body>
+</html>
+
+-
+
