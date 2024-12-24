@@ -3,14 +3,11 @@
 <body>
 
 <?php
-function familyName($fname, $year) {
-  echo "$fname Refsnes. Born in $year <br>";
+function myMessage() {
+  echo "Welcome To All!";
 }
-
-familyName("Hege","1975");
-familyName("Stale","1978");
-familyName("Kai Jim","1983");
-?>
-
+myMessage();
+?> 
 </body>
 </html>
+
