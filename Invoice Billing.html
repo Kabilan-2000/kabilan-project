@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Purchase Billing</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Invoice Purchase Billing</h2>
+        <form id="invoiceForm">
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" class="form-control" id="itemName" required>
+            </div>
+            <div class="form-group">
+                <label for="itemQuantity">Quantity</label>
+                <input type="number" class="form-control" id="itemQuantity" required>
+            </div>
+            <div class="form-group">
+                <label for="itemPrice">Price</label>
+                <input type="number" class="form-control" id="itemPrice" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Item</button>
+        </form>
+
+        <h3 class="mt-4">Invoice Items</h3>
+        <table class="table table-bordered mt-3">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceTableBody">
+            </tbody>
+        </table>
+    </div>
+<script>
+        document.getElementById('invoiceForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const itemName = document.getElementById('itemName').value;
+            const itemQuantity = document.getElementById('itemQuantity').value;
+            const itemPrice = document.getElementById('itemPrice').value;
+            const total = itemQuantity * itemPrice;
+            const tableBody = document.getElementById('invoiceTableBody');
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${itemName}</td>
+                <td>${itemQuantity}</td>
+                <td>${itemPrice}</td>
+                <td>${total}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm edit-btn">Edit</button>
+                    <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+            document.getElementById('invoiceForm').reset();
+            row.querySelector('.edit-btn').addEventListener('click', function() {
+                const cells = row.children;
+                document.getElementById('itemName').value = cells[0].innerText;
+                document.getElementById('itemQuantity').value = cells[1].innerText;
+                document.getElementById('itemPrice').value = cells[2].innerText;
+                row.remove();
+            });
+            row.querySelector('.delete-btn').addEventListener('click', function() {
+            row.remove();
+            });
+        });
+    </script>
+</body>
+</html>
