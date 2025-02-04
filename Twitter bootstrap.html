@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f8fa;
+    }
+    .navbar {
+      background-color: #1da1f2;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .nav-link.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .profile-sidebar {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .feed {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .trends {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .trend-item:hover {
+      background-color: #f0f8ff;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      color: #1da1f2;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Twitter</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#explore">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#notifications">Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#message">Message</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 mb-3">
+        <div class="profile-sidebar">
+          <h5><a href="#profile">@username</a></h5>
+          <p>Bio goes here... Learn more <a href="#about">here</a>.</p>
+          <button class="btn btn-primary btn-sm">Edit Profile</a></button>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-8 mb-3">
+        <div class="feed">
+          <h5><a href="#post1">Post Title 1</a></h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#readMore1">Read more</a></p>
+          <button class="btn btn-outline-primary btn-sm">Like</button>
+          <button class="btn btn-outline-secondary btn-sm">Comment</button>
+        </div>
+        <div class="feed">
+          <h5><a href="#post2">Post Title 2</a></h5>
+          <p>Suspendisse potenti. Praesent sit amet <a href="#readMore2">Read more</a></p>
+          <button class="btn btn-outline-primary btn-sm">Like</button>
+          <button class="btn btn-outline-secondary btn-sm">Comment</button>
+        </div>
+      </div>
+        <div class="col-lg-3 col-md-4 mb-3">
+        <div class="trends">
+          <h5>Trends</h5>
+          <div class="trend-item">
+            <a href="#trend1"><strong>#TrendingTopic1</strong></a>
+            <p>10k Tweets</p>
+          </div>
+          <div class="trend-item">
+            <a href="#trend2"><strong>#TrendingTopic2</strong></a>
+            <p>5k Tweets</p>
+          </div>
+          <div class="trend-item">
+            <a href="#trend3"><strong>#TrendingTopic3</strong></a>
+            <p>8k Tweets</p>
+          </div>
+          <div class="trend-item">
+            <a href="#trend4"><strong>#TrendingTopic4</strong></a>
+            <p>15k Tweets</p>
+          </div> 
+          <div class="trend-item">
+            <a href="#trend5"><strong>#TrendingTopic5</strong></a>
+            <p>20k Tweets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
