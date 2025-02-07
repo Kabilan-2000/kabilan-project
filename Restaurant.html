@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            padding-top: 50px;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 18px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+        section {
+            padding: 50px 0;
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .menu-item h4 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .menu-item p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            font-size: 16px;
+            color: #555;
+        }
+        .ratio iframe {
+            border-radius: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        #reviews .card-body {
+            text-align: center; 
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+        #reviews .card {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #reviews {
+            text-align: center; 
+        }
+        .card-body p {
+            font-size: 18px;
+            color: #495057;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="menu" class="container my-5">
+        <h2 class="text-center">Break Fast</h2>
+        <div class="row">
+            <div class="col-md-4 menu-item">
+                <img src="imag/dish1.jpg" alt="Dish 1">
+                <h4>Idli</h4>
+                <p>Rs.40</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="imag/dish2.jpg" alt="Dish 2">
+                <h4>Poori</h4>
+                <p>Rs.40</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="imag/dish3.jpg" alt="Dish 3">
+                <h4>Pongal</h4>
+                <p>Rs.50</p>
+            </div>
+        </div>
+        <h2 class="text-center">Dinner</h2>
+        <div class="row">
+            <div class="col-md-4 menu-item">
+                <img src="imag/dish4.jpg" alt="Dish 1">
+                <h4>Chapathi</h4>
+                <p>Rs.40</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="imag/dish5.jpg" alt="Dish 2">
+                <h4>Dosa</h4>
+                <p>Rs.50</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="imag/dish6.jpg" alt="Dish 3">
+                <h4>Parotta</h4>
+                <p>Rs.40</p>
+            </div>
+        </div>
+    <section id="reviews" class="container my-5">
+        <h2 class="text-center">Customer Reviews</h2>
+        <div class="card">
+            <div class="card-body">
+                <p>"Great food and amazing service!" - Siva</p>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-body">
+                <p>"A wonderful experience, will come back for sure!" - Ravi</p>
+            </div>
+        </div>
+    </section>
+    <section id="location" class="container my-5">
+        <h2 class="text-center">Our Location</h2>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d124391.04086737047!2d80.09377309580236!3d13.021655906091045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m4!1s0x3a5265fc164737db%3A0x5705540482003bd9!3m2!1d13.0811017!2d80.27078399999999!4m5!1s0x3a5265fc164737db%3A0x5705540482003bd9!2sNational%20Durbar%20Restaurant%2C%2033%2C%20Raja%20Muthiah%20Rd%2C%20Periamet%2C%20Park%20Town%2C%20Chennai%2C%20Tamil%20Nadu%20600003!3m2!1d13.0811017!2d80.27078399999999!5e0!3m2!1sen!2sin!4v1738864711813!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowhalfscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade allowhalfscreen"></iframe>
+        </div>
+    </section>
+</body>
+</html>
